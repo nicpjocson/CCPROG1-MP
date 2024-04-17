@@ -1,0 +1,65 @@
+MACHINE PROJECT
+
+Input: 
+Output: 
+
+nTrend == nPrevTrend
+Yes: Randomize nTrend until nTrend != nPrevTrend
+
+ALGORITHM: 
+1 User begins with 5000 nBells
+2 Sunday: Display random price (90-110 Bells) of buying turnips
+3 Ask the user if they want to buy turnips
+	3.1 Yes: Ask how many turnips to buy
+		3.1.1 Valid input: Bells subtract and turnips add; program proceeds to step 4
+		3.1.2 Invalid input: Display how many turnips they can buy and proceed step 2
+	3.2 No: Program proceeds to step 
+Monday to Saturday: 
+4 Check if user has 0 turnips
+	4.1 Yes: Next week begins and program proceeds to step 2
+	4.2 No: Program proceeds to step 5
+5 Random trend is selected
+6 Check if current week trend is equal to previous week trend
+	6.1 Yes: Randomize trend until current week trend is unequal to previous week trend
+	6.2 No: Program proceeds to step 7
+7 Turnips selling price is within random: average, awesome, or bad trend
+8 Display random price of selling turnips
+9 Ask the user if they want to sell turnips
+	9.1 Yes: Bells and turnips update
+		9.1.1 Valid input: Bells add and turnips subtract
+		9.1.2 Invalid input: Display how many turnips they can sell and do step 3
+	9.2 No: Proceed to next day; do step 9
+10 After Saturday, if user still holds turnips, turnips expire
+11 After final day of final week
+	11.1 Yes: Program proceeds to step 12
+	11.2 No: Program proceeds to step 2
+12 Check if user has 1 000 000 Bells
+	12.1 Yes: "Congratulations!"
+	12.2 No: "Try again!"
+
+MUST:
+- use user-defined functions
+- use pointers
+- use loops
+- use conditions
+- https://www.geeksforgeeks.org/rand-and-srand-in-ccpp/ on how to use rand() and srand()
+- perform coding "incrimentally":
+	- divide the program specification into subproblems to solve each problem separately
+	- coding the solutions to the subproblems one at a time
+		- test and debug after a solution for one subproblem
+- pass paremeters to functions
+
+! Click Project/Build options, then in tab Compiler Settings choose subtab Other options, and place -std=c99 in the text area, and click Ok. This will turn C99 mode on for your Compiler.
+
+NOT ALLOWED TO:
+- declare/use global/static variables
+- use goto statements
+- use the break statement to exit a block other than switch blocks
+- use the return statemenet or exit statement to prematurely terminate a loop/function/program
+- use the exist statement to prematurely terminate a loop or terminate the function/program
+- call the main() function to repeat the process instead of using loops
+
+FOR DOCUEMNTATION, INCLUDE:
+- file/introductory comments before preprocessor directives
+- function comments
+- in-line comments
